@@ -59,13 +59,7 @@ app.use('/campgrounds/:id/comments', commentRoutes);
 
 
 
-// For online editor like c9
 
-// app.listen(process.env.PORT, process.env.IP,function(){
-//    console.log('Server started !');
-// });
-
-// For local machine
-app.listen(3000,function(){
-   console.log('Server started !');
-});
+var port = process.env.PORT || 3000;
+app.listen(port);
+console.log('server started ...');
