@@ -23,7 +23,9 @@ var commentRoutes    = require('./routes/comments'),
 
 
 
-mongoose.connect('mongodb://localhost/yelp_camp');
+// mongoose.connect('mongodb://localhost/yelp_camp');
+mongoose.connect('mongodb://gurkiran:mlab12@ds019893.mlab.com:19893/campground');
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -63,7 +65,7 @@ app.use('/campgrounds/:id/comments', commentRoutes);
 //    console.log('Server started !');
 // });
 
-// For local machine 
+// For local machine
 app.listen(3000,function(){
    console.log('Server started !');
 });
